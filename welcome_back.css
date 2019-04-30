@@ -1,0 +1,285 @@
+body, html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body .card {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+  z-index: -1;
+  background: url(../image/background_three.png) no-repeat;
+}
+
+@media (min-width: 840px) {
+  body .card {
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background: url(../image/background_three.png) repeat;
+  }
+}
+
+body .card .top {
+  margin: 7% 7%;
+  float: right;
+}
+
+body .card .top input[type=text] {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  background-color: white;
+  background-size: 20px auto;
+  background-image: url("../image/search_icon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border: 2px solid blue;
+  margin: 7% 14%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  padding: 12px 20px 12px 40px;
+}
+
+body .card .top input[type=text]:focus {
+  width: 50%;
+}
+
+body .card .middle-one {
+  text-align: center;
+  margin: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 840px) {
+  body .card .middle-one {
+    margin: auto;
+  }
+}
+
+body .card .middle-one img {
+  width: 180px;
+  height: 180px;
+  border-radius: 180px;
+  position: relative;
+}
+
+@media (min-width: 840px) {
+  body .card .middle-one img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: relative;
+    left: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body .card .middle-one p {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 300;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
+  left: 15%;
+  top: 35%;
+  padding: 0;
+}
+
+@media (min-width: 840px) {
+  body .card .middle-one p {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    font-weight: bold;
+  }
+}
+
+body .card .middle-two {
+  margin: auto;
+}
+
+body .card .middle-two input[type=text], body .card .middle-two input[type=password] {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  background-color: white;
+  background-size: 20px auto;
+  background-image: url("../image/girl.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid blue;
+  margin: 7% 14%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  padding: 12px 20px 12px 40px;
+}
+
+@media (min-width: 840px) {
+  body .card .middle-two input[type=text], body .card .middle-two input[type=password] {
+    width: 25%;
+    margin: 2% 35%;
+  }
+}
+
+body .card .middle-two input[type=password] {
+  background-image: url("../image/lock.png");
+}
+
+body .card .middle-two .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 10px 35px 35px;
+  cursor: pointer;
+  font-size: 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (min-width: 840px) {
+  body .card .middle-two .container {
+    width: 25%;
+    margin: 1% 35%;
+  }
+}
+
+body .card .middle-two .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+body .card .middle-two .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+body .card .middle-two .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+body .card .middle-two .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+body .card .middle-two .container input:checked ~ .checkmark {
+  background-color: blue;
+}
+
+body .card .middle-two .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body .card .middle-two .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .card .middle-two input[type="text"]::-webkit-input-placeholder {
+  margin-left: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+body .card .middle-two input[type="text"]:-ms-input-placeholder {
+  margin-left: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+body .card .middle-two input[type="text"]::-ms-input-placeholder {
+  margin-left: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+body .card .middle-two input[type="text"]::placeholder {
+  margin-left: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+body .card .middle-two input[type="text"]:focus {
+  border: 3px solid blue;
+}
+
+body .card .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 7% auto;
+}
+
+@media (min-width: 840px) {
+  body .card .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 3% 40%;
+  }
+}
+
+body .card .bottom button {
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: blue;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+}
+/*# sourceMappingURL=welcome_back.css.map */
